@@ -15,8 +15,10 @@ turtle.shape(image)
 #
 # turtle.onscreenclick(get_mouse_click_coor)
 # turtle.mainloop()
-ALIGN = "center"
-FONT =("Courier",15,"normal")
+
+#Constants variables
+# ALIGN = "center"
+# FONT =("Courier",15,"normal")
 
 Data = pd.read_csv("50_states.csv")
 all_states = Data.state.to_list()
@@ -37,7 +39,7 @@ while len(guessed_state) < 50:
         break
 
     if answer_state in all_states :
-        n += 1
+        guessed_state.append(answer_state)
         t = turtle.Turtle()
         t.hideturtle()
         t.penup()
